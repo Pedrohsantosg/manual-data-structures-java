@@ -77,7 +77,41 @@ O sistema contempla operações de inserção, remoção, consulta, busca, organ
 
 ## Como executar
 
-Para executar o projeto, basta clonar o repositório, abrir em uma IDE Java de sua preferência, compilar os arquivos e executar a aplicação principal. Também é possível rodar os testes JUnit para validar o funcionamento das estruturas implementadas e das funcionalidades do sistema.
+### Pré-requisitos
+
+- Java 17+
+- Maven 3.9+
+
+### Build e testes
+
+Na raiz do projeto, execute:
+
+```bash
+mvn clean test
+```
+
+### Executar demonstração do sistema
+
+Para compilar e executar a classe principal:
+
+```bash
+mvn -q compile
+mvn -q exec:java -Dexec.mainClass="br.com.unidade2.restaurante.app.Main"
+```
+
+Caso o plugin `exec-maven-plugin` não esteja configurado na sua IDE, você pode executar a classe `Main` diretamente pela IDE.
+
+### Executar interface grafica (JavaFX)
+
+A interface do restaurante foi implementada em **JavaFX** na classe `RestauranteFxApp`.
+
+Com Maven configurado no ambiente:
+
+```bash
+mvn -q javafx:run
+```
+
+Sem JavaFX resolvido no classpath da IDE, a classe `Main` faz fallback para o modo console.
 
 ## Como testar
 
