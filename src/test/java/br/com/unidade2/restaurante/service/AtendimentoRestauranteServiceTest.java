@@ -24,7 +24,6 @@ class AtendimentoRestauranteServiceTest {
         service = new AtendimentoRestauranteService();
     }
 
-    // ── registrarPedido ───────────────────────────────────────────────────────
 
     @Test
     @DisplayName("registrarPedido deve adicionar o pedido e incrementar total pendente")
@@ -52,7 +51,6 @@ class AtendimentoRestauranteServiceTest {
                 () -> service.registrarPedido(pedido(1, "Bob", 2)));
     }
 
-    // ── buscarPedidoPorId ─────────────────────────────────────────────────────
 
     @Test
     @DisplayName("buscarPedidoPorId deve retornar o pedido correto")
@@ -70,8 +68,6 @@ class AtendimentoRestauranteServiceTest {
     void buscarPedidoPorIdInexistenteRetornaNull() {
         assertNull(service.buscarPedidoPorId(999));
     }
-
-    // ── chamarProximoPedidoFIFO ───────────────────────────────────────────────
 
     @Test
     @DisplayName("chamarProximoPedidoFIFO deve retornar pedidos na ordem de chegada")
@@ -118,8 +114,6 @@ class AtendimentoRestauranteServiceTest {
         service.chamarProximoPedidoFIFO();
         assertEquals(0, service.totalPedidosPendentesCliente("Ana"));
     }
-
-    // ── chamarPedidoMaisPrioritario ───────────────────────────────────────────
 
     @Test
     @DisplayName("chamarPedidoMaisPrioritario deve retornar o pedido de menor prioridade numérica primeiro")
@@ -171,7 +165,6 @@ class AtendimentoRestauranteServiceTest {
         assertNull(service.buscarPedidoPorId(1));
     }
 
-    // ── mistura FIFO e Prioritário (pedidos ativos) ───────────────────────────
 
     @Test
     @DisplayName("Pedido chamado via FIFO não deve aparecer na fila prioritária")
@@ -205,7 +198,6 @@ class AtendimentoRestauranteServiceTest {
         assertEquals(1, viaFifo.getId());
     }
 
-    // ── listarPedidosPendentesOrdenadosPorId ──────────────────────────────────
 
     @Test
     @DisplayName("listarPedidosPendentesOrdenadosPorId deve retornar lista em ordem crescente de ID")
@@ -228,7 +220,6 @@ class AtendimentoRestauranteServiceTest {
         assertTrue(service.listarPedidosPendentesOrdenadosPorId().isEmpty());
     }
 
-    // ── totalPedidosAtePrioridade ─────────────────────────────────────────────
 
     @Test
     @DisplayName("totalPedidosAtePrioridade deve contar apenas pedidos com prioridade <= limite")
@@ -259,7 +250,6 @@ class AtendimentoRestauranteServiceTest {
         assertEquals(0, service.totalPedidosAtePrioridade(3));
     }
 
-    // ── totalPedidosPendentesCliente ──────────────────────────────────────────
 
     @Test
     @DisplayName("totalPedidosPendentesCliente para cliente sem pedidos deve retornar 0")
@@ -267,7 +257,6 @@ class AtendimentoRestauranteServiceTest {
         assertEquals(0, service.totalPedidosPendentesCliente("Ninguem"));
     }
 
-    // ── fluxo completo ────────────────────────────────────────────────────────
 
     @Test
     @DisplayName("Fluxo completo: registrar, atender por FIFO e por prioridade até zerar a fila")
