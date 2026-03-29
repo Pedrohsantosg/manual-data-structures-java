@@ -2,6 +2,13 @@ package br.com.unidade2.restaurante.datastructures;
 
 import java.util.Arrays;
 
+/**
+ * Implementação de um Min-Heap utilizando um array dinâmico.
+ * o menor elemento está sempre na raiz , facilitando
+ * o acesso rápido ao item de maior prioridade.
+ * @author Pedro, Beatriz, Julio e Livia
+ * @since 20/03/2026
+ */
 public class MinHeap<T extends Comparable<T>> {
 
     private Object[] elements = new Object[16];

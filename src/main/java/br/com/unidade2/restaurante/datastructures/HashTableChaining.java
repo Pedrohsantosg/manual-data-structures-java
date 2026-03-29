@@ -1,5 +1,12 @@
 package br.com.unidade2.restaurante.datastructures;
 
+/**
+ * Implementação de uma Tabela Hash com chaining
+ *
+ * @author Pedro, Bia, Julio e Livia
+ * @since 20/03/2026
+ */
+
 public class HashTableChaining<K, V> {
 
     private static class Entry<K, V> {
@@ -16,6 +23,9 @@ public class HashTableChaining<K, V> {
     private Entry<K, V>[] buckets;
     private int size;
 
+    /**
+     * Constrói uma nova HashTable com capacidade inicial padrão de 16.
+     */
     @SuppressWarnings("unchecked")
     public HashTableChaining() {
         buckets = (Entry<K, V>[]) new Entry[16];
@@ -47,6 +57,13 @@ public class HashTableChaining<K, V> {
         }
     }
 
+
+    /**
+     * Retorna o valor para o qual a chave especificada está mapeada.
+     *
+     * @param key a chave cujo valor associado deve ser retornado.
+     * @return o valor associado à chave, ou {@code null} se a chave não for encontrada.
+     */
     public V get(K key) {
         if (key == null) {
             return null;

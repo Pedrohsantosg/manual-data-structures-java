@@ -1,5 +1,12 @@
 package br.com.unidade2.restaurante.domain;
 
+/**
+ * Classe de pedido ordenação baseada em prioridade e tempo de chegada, o menor valor tem prioridade
+ * caso tenha empate no nível de urgência, a prioridade é do pedido mais antigo.
+ * @author Pedro, Beatriz, Julio e Livia
+ * @since 20/03/2026
+ */
+
 public class Pedido implements Comparable<Pedido> {
 
     private final int id;

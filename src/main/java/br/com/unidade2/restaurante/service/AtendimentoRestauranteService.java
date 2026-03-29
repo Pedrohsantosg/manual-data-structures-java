@@ -8,6 +8,12 @@ import br.com.unidade2.restaurante.domain.Pedido;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Responsável por gerenciar o fluxo de atendimento do restaurante.
+ * * @author Pedro
+ * @since 20/03/2026
+ */
+
 public class AtendimentoRestauranteService {
 
     private final QueueWithTwoStacks<Integer> filaPedidos = new QueueWithTwoStacks<>();

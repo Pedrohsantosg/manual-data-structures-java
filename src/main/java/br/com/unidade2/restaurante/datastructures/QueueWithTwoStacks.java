@@ -1,4 +1,9 @@
 package br.com.unidade2.restaurante.datastructures;
+/**
+ * Implementação de uma Fila utilizando duas pilhas internas (LinkedStack).
+ * @author Pedro
+ * @since 20/03/2026
+ */
 
 public class QueueWithTwoStacks<T> {
 

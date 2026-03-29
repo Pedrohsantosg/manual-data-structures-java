@@ -1,4 +1,11 @@
 package br.com.unidade2.restaurante.datastructures;
+/**
+ * Implementação de uma Pilha (Stack) utilizando uma lista encadeada interna.
+ * Por utilizar uma lista encadeada, a pilha possui
+ * dimensionamento dinâmico
+ * @author Pedro
+ * @since 20/03/2026
+ */
 
 public class LinkedStack<T> {
 

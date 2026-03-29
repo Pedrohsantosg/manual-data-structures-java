@@ -1,5 +1,11 @@
 package br.com.unidade2.restaurante.datastructures;
 
+/**
+ * Implementação de uma lista simplesmente encadeada.
+ * @author Pedro, Beatriz, Julio e Livia
+ * @since 20/03/2026
+ */
+
 public class SinglyLinkedList<T> {
 
     private static class Node<T> {

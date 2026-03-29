@@ -34,6 +34,11 @@ import javafx.stage.Stage;
 
 public class RestauranteFxApp extends Application {
 
+    /**
+     * Interface gráfica do projeto
+     *
+     */
+
     private final AtendimentoRestauranteService service = new AtendimentoRestauranteService();
     private final ObservableList<PedidoRow> pendentesRows = FXCollections.observableArrayList();
 

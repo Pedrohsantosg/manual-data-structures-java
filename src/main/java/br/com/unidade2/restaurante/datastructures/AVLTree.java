@@ -2,7 +2,21 @@ package br.com.unidade2.restaurante.datastructures;
 
 import java.util.function.BiConsumer;
 
+
+
+/**
+ * Implementação de uma Árvore AVL (Árvore Binária de Busca Balanceada).
+ *
+ * @param <K> o tipo das chaves mantidas por esta árvore
+ * @param <V> o tipo dos valores mapeados.
+ * * @author Pedro, Bia, Julio e Livia
+ * @since 20/03/2026
+ */
 public class AVLTree<K extends Comparable<K>, V> {
+
+    /**
+     * Classe  que representa um nó da AVL
+     */
 
     private static class Node<K, V> {
         private K key;
